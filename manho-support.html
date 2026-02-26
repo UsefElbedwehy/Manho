@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>منهو – Support</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; color: #1d1d1f; }
+    header { background: #1c1c1e; color: white; padding: 40px 20px; text-align: center; }
+    header h1 { font-size: 2rem; font-weight: 700; }
+    header p { color: #a1a1a6; margin-top: 8px; }
+    .lang-toggle { display: flex; justify-content: center; gap: 12px; padding: 20px; }
+    .lang-toggle button { padding: 8px 24px; border: 1.5px solid #0071e3; border-radius: 20px; background: transparent; color: #0071e3; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
+    .lang-toggle button.active { background: #0071e3; color: white; }
+    .container { max-width: 780px; margin: 0 auto; padding: 20px 20px 60px; }
+    .card { background: white; border-radius: 18px; padding: 36px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 14px; }
+    p, li { font-size: 0.97rem; line-height: 1.75; color: #3a3a3c; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .faq-item { border-bottom: 1px solid #f0f0f0; padding: 16px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item strong { display: block; margin-bottom: 6px; color: #1d1d1f; font-size: 1rem; }
+    .contact-box { background: #f0f7ff; border-radius: 12px; padding: 20px; margin-top: 16px; }
+    .contact-box a { color: #0071e3; font-weight: 600; text-decoration: none; }
+    .rtl { direction: rtl; text-align: right; }
+    .rtl ul { padding-left: 0; padding-right: 20px; }
+    [data-lang="ar"] { display: none; }
+    footer { text-align: center; padding: 30px; color: #6e6e73; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>منهو · Manho</h1>
+  <p>Support Center — مركز الدعم</p>
+</header>
+
+<div class="lang-toggle">
+  <button class="active" onclick="setLang('en')">English</button>
+  <button onclick="setLang('ar')">العربية</button>
+</div>
+
+<!-- ENGLISH -->
+<div class="container" data-lang="en">
+
+  <div class="card">
+    <h2>About Manho (منهو)</h2>
+    <p>Manho is a caller ID and spam blocking app designed for Arabic-speaking users. It helps you identify unknown callers, block spam calls, and search for phone numbers or contact names in our community-powered database.</p>
+  </div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <strong>How does Manho identify callers?</strong>
+      <p>Manho uses a community-sourced database. When users (with permission) contribute contacts, they are hashed and stored to help identify numbers for everyone.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How do I remove my number from the database?</strong>
+      <p>Go to Settings → Privacy → Mark my number as private. You can also email us and we will remove it within 7 business days.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Does Manho access my contacts without permission?</strong>
+      <p>No. Manho will always ask for your explicit permission before accessing contacts or call logs. You can revoke permission at any time in your iPhone settings.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Is my data sold to advertisers?</strong>
+      <p>Never. We do not sell personal data. See our Privacy Policy for full details.</p>
+    </div>
+    <div class="faq-item">
+      <strong>How do I delete my account?</strong>
+      <p>Go to Settings → Account → Delete Account, or email us at manho.sa.official@gmail.com with your request.</p>
+    </div>
+    <div class="faq-item">
+      <strong>The app is not identifying callers. What should I do?</strong>
+      <p>Make sure you have granted "Phone" and "Contacts" permissions in iPhone Settings → Privacy. Also ensure you've enabled the Manho extension under Settings → Phone → Call Blocking & Identification.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Contact Support</h2>
+    <p>We typically respond within 24–48 hours.</p>
+    <div class="contact-box">
+      📧 <a href="mailto:manho.sa.official@gmail.com">manho.sa.official@gmail.com</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ARABIC -->
+<div class="container rtl" data-lang="ar">
+
+  <div class="card">
+    <h2>عن تطبيق منهو</h2>
+    <p>منهو هو تطبيق للتعرف على المتصل وحجب المكالمات المزعجة، مصمّم للمستخدمين الناطقين بالعربية. يساعدك على معرفة هوية المتصلين المجهولين، وحجب السبام، والبحث عن أرقام أو أسماء في قاعدة بياناتنا المجتمعية.</p>
+  </div>
+
+  <div class="card">
+    <h2>الأسئلة الشائعة</h2>
+
+    <div class="faq-item">
+      <strong>كيف يتعرف منهو على المتصلين؟</strong>
+      <p>يستخدم منهو قاعدة بيانات مجتمعية. عندما يشارك المستخدمون (بإذنهم) جهات اتصالهم، تُشفَّر وتُخزَّن للمساعدة في التعرف على الأرقام للجميع.</p>
+    </div>
+    <div class="faq-item">
+      <strong>كيف أحذف رقمي من القاعدة؟</strong>
+      <p>اذهب إلى الإعدادات ← الخصوصية ← "تسجيل رقمي كخاص". يمكنك أيضًا مراسلتنا وسنحذفه خلال 7 أيام عمل.</p>
+    </div>
+    <div class="faq-item">
+      <strong>هل يصل منهو إلى جهات اتصالي دون إذن؟</strong>
+      <p>لا. سيطلب منهو دائمًا إذنك الصريح قبل الوصول إلى جهات الاتصال أو سجلات المكالمات. يمكنك إلغاء الإذن في أي وقت من إعدادات الآيفون.</p>
+    </div>
+    <div class="faq-item">
+      <strong>هل تُباع بياناتي للمعلنين؟</strong>
+      <p>أبدًا. لا نبيع البيانات الشخصية. راجع سياسة الخصوصية للتفاصيل الكاملة.</p>
+    </div>
+    <div class="faq-item">
+      <strong>كيف أحذف حسابي؟</strong>
+      <p>اذهب إلى الإعدادات ← الحساب ← حذف الحساب، أو راسلنا على manho.sa.official@gmail.com.</p>
+    </div>
+    <div class="faq-item">
+      <strong>التطبيق لا يتعرف على المتصلين، ماذا أفعل؟</strong>
+      <p>تأكد من منح إذن "الهاتف" و"جهات الاتصال" من إعدادات آيفون ← الخصوصية. وتأكد أيضًا من تفعيل إضافة منهو في الإعدادات ← الهاتف ← حجب المكالمات والتعرف عليها.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>تواصل معنا</h2>
+    <p>نرد عادةً خلال 24–48 ساعة.</p>
+    <div class="contact-box">
+      📧 <a href="mailto:manho.sa.official@gmail.com">manho.sa.official@gmail.com</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Youssef Elbedwehy — منهو · Manho. All rights reserved.
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+    });
+    document.querySelectorAll('.lang-toggle button').forEach((btn, i) => {
+      btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'ar'));
+    });
+  }
+</script>
+</body>
+</html>
