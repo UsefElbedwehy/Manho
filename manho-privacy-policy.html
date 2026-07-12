@@ -10,6 +10,9 @@
     header { background: #1c1c1e; color: white; padding: 40px 20px; text-align: center; }
     header h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; }
     header p { margin-top: 8px; color: #a1a1a6; font-size: 0.95rem; }
+    nav.pages { display: flex; justify-content: center; gap: 20px; padding: 14px 20px; background: #f0f0f2; font-size: 0.9rem; }
+    nav.pages a { color: #0071e3; text-decoration: none; font-weight: 600; }
+    nav.pages a.current { color: #1d1d1f; text-decoration: underline; }
     .lang-toggle { display: flex; justify-content: center; gap: 12px; padding: 20px; }
     .lang-toggle button { padding: 8px 24px; border: 1.5px solid #0071e3; border-radius: 20px; background: transparent; color: #0071e3; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
     .lang-toggle button.active { background: #0071e3; color: white; }
@@ -20,6 +23,7 @@
     ul { padding-left: 20px; margin-top: 8px; }
     li { margin-bottom: 6px; }
     .badge { display: inline-block; background: #e8f4fd; color: #0071e3; border-radius: 8px; padding: 2px 10px; font-size: 0.8rem; font-weight: 600; margin-bottom: 16px; }
+    .highlight { background: #f0f7ff; border-radius: 12px; padding: 16px 20px; margin-top: 12px; font-weight: 600; }
     footer { text-align: center; padding: 30px; color: #6e6e73; font-size: 0.85rem; }
     .rtl { direction: rtl; text-align: right; }
     .rtl ul { padding-left: 0; padding-right: 20px; }
@@ -32,6 +36,12 @@
   <p>Privacy Policy — سياسة الخصوصية</p>
 </header>
 
+<nav class="pages">
+  <a href="manho-privacy-policy.html" class="current">Privacy Policy</a>
+  <a href="manho-terms.html">Terms of Service</a>
+  <a href="manho-support.html">Support</a>
+</nav>
+
 <div class="lang-toggle">
   <button class="active" onclick="setLang('en')">English</button>
   <button onclick="setLang('ar')">العربية</button>
@@ -41,67 +51,84 @@
 <div class="container" data-lang="en">
 
   <div class="card">
-    <span class="badge">Last updated: January 2025</span>
+    <span class="badge">Last updated: July 2026</span>
     <h2>Introduction</h2>
-    <p>Welcome to <strong>Manho (منهو)</strong>. This Privacy Policy explains how Youssef Elbedwehy ("I", "me", "developer") collects, uses, and protects your information when you use the Manho app. By using the app, you agree to this policy.</p>
+    <p>Welcome to <strong>Manho (منهو)</strong>. This Privacy Policy explains how Youssef Elbedwehy ("I", "me", "developer") collects, uses, and protects information when you use the Manho app. By using the app, you agree to this policy.</p>
+  </div>
+
+  <div class="card">
+    <h2>What Manho Does</h2>
+    <p>Manho protects you from spam and scam calls and labels callers already saved in your own contacts. Manho does <strong>not</strong> provide a way to search for or look up information about other people, and it does <strong>not</strong> compile or display profiles of individuals from public records, community submissions, or any other source. If you can't find a "search a number" or "search a name" feature — that's intentional.</p>
   </div>
 
   <div class="card">
     <h2>Information We Collect</h2>
     <ul>
-      <li><strong>Phone number:</strong> Used to create your account and provide caller ID services.</li>
-      <li><strong>Contacts (with your permission):</strong> Uploaded in hashed/encrypted form to improve caller ID accuracy for all users. You can opt out at any time.</li>
-      <li><strong>Call logs (with your permission):</strong> Used only locally on your device to identify incoming calls. Never stored on our servers.</li>
-      <li><strong>Search queries:</strong> Phone numbers or names you search for, used to return results and improve the database.</li>
-      <li><strong>Device information:</strong> Basic device type and OS version for app compatibility and crash reporting.</li>
+      <li><strong>Account information:</strong> your phone number, or your name/email if you choose to sign in with Google or Apple, used to create and secure your account.</li>
+      <li><strong>Contacts (with your permission) — on-device only:</strong> used exclusively on your device to display the name of a caller you have already saved. Your address book is never uploaded, transmitted, or stored on our servers.</li>
+      <li><strong>Call log — on-device only:</strong> stored locally on your device to show your own call history inside the app. Never uploaded to our servers.</li>
+      <li><strong>Spam reports (numbers only):</strong> when you report a number as spam, we store the phone number (or a hashed form of it) and a report count on our servers to protect the community. We never attach a person's name to a spam report.</li>
+      <li><strong>Usage &amp; diagnostic data:</strong> basic analytics (e.g. app opened, feature used) and crash/performance data, used in aggregate to improve the app. This is not linked to the identity of any caller.</li>
+      <li><strong>Device information:</strong> device type, OS version, and a push-notification token, used for app compatibility and to deliver notifications.</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>How We Use Your Information</h2>
     <ul>
-      <li>Identify unknown callers and display their names.</li>
-      <li>Detect and block spam calls.</li>
-      <li>Allow users to search for phone numbers and names.</li>
-      <li>Improve database accuracy through community contributions.</li>
-      <li>Send important app notifications (no marketing without consent).</li>
+      <li>Label an incoming or outgoing call with a name — but only if that number is already saved in your own contacts.</li>
+      <li>Flag numbers the community has reported as spam or scam, so you can avoid or block them.</li>
+      <li>Let you block numbers you don't want to hear from.</li>
+      <li>Create, secure, and let you manage your account.</li>
+      <li>Improve the app using aggregate, non-identifying usage and diagnostic data.</li>
+      <li>Send service-related notifications (no marketing without your consent).</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>Data Sharing</h2>
-    <p>We do <strong>not sell</strong> your personal data to third parties. Data may be shared only in these limited cases:</p>
+    <p>We do <strong>not sell</strong> your personal data, and we do <strong>not</strong> share it with data brokers. Data may be shared only in these limited cases:</p>
     <ul>
-      <li>With service providers (e.g., cloud hosting) strictly to operate the app.</li>
-      <li>If required by Saudi Arabian law or valid legal process.</li>
-      <li>In an anonymized, aggregated form for research or analytics.</li>
+      <li>With service providers who operate the app on our behalf — currently Google/Firebase (authentication, push notifications, analytics, crash reporting) and Supabase (account records, spam-report database) — strictly to provide the service, under their own security and privacy terms.</li>
+      <li>If required by Saudi Arabian law or a valid legal process.</li>
+      <li>In an anonymized, aggregated form (e.g. total spam reports) that cannot identify you.</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>Your Rights</h2>
     <ul>
-      <li>Request a copy of your data.</li>
-      <li>Request deletion of your account and associated data.</li>
-      <li>Opt out of contact upload at any time in app settings.</li>
-      <li>Mark your own number as private or unlisted.</li>
+      <li>Request a copy of the data we hold about your account.</li>
+      <li>Delete your account at any time from <strong>Profile → Delete Account</strong> in the app, or by emailing us.</li>
+      <li>Revoke the Contacts, Notifications, Camera, or Microphone permission at any time from your iPhone's Settings app.</li>
+      <li>Dispute a spam report you believe was made in error by contacting us.</li>
     </ul>
     <p style="margin-top:12px;">To exercise any right, contact us at <a href="mailto:manho.sa.official@gmail.com">manho.sa.official@gmail.com</a>.</p>
   </div>
 
   <div class="card">
     <h2>Data Retention</h2>
-    <p>Your data is retained as long as your account is active. Upon account deletion, personal data is permanently removed within 30 days. Anonymized aggregate data may be retained longer.</p>
+    <p>Account data is retained while your account is active. When you delete your account, your account data is permanently removed within 30 days. Community spam-report data (numbers only, never names) may be retained longer to keep protecting other users, in accordance with applicable law.</p>
   </div>
 
   <div class="card">
     <h2>Children's Privacy</h2>
-    <p>Manho is not directed at children under the age of 13. We do not knowingly collect data from children. If you believe a child has provided us with personal information, please contact us immediately.</p>
+    <p>Manho is not directed at children under the age of 13. We do not knowingly collect data from children. If you believe a child has provided us with personal information, please contact us immediately and we will remove it.</p>
   </div>
 
   <div class="card">
     <h2>Security</h2>
-    <p>We use industry-standard encryption and security practices to protect your data. Contacts are uploaded in hashed form and are never readable in plain text by the developer or staff.</p>
+    <p>We use industry-standard encryption in transit and access controls on our servers to protect your data. Your address book and call log never leave your device, so they are never at risk from a server-side breach.</p>
+  </div>
+
+  <div class="card">
+    <h2>Third-Party Services</h2>
+    <p>Manho uses the following third-party services to operate:</p>
+    <ul>
+      <li><strong>Firebase / Google</strong> (authentication, push notifications, analytics, crash reporting) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><strong>Supabase</strong> (account records and the community spam-report database)</li>
+      <li><strong>Sign in with Apple</strong>, when you choose that sign-in method — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+    </ul>
   </div>
 
   <div class="card">
@@ -122,67 +149,84 @@
 <div class="container rtl" data-lang="ar">
 
   <div class="card">
-    <span class="badge">آخر تحديث: يناير 2025</span>
+    <span class="badge">آخر تحديث: يوليو 2026</span>
     <h2>مقدمة</h2>
-    <p>مرحبًا بك في تطبيق <strong>منهو</strong>. توضّح سياسة الخصوصية هذه كيفية جمع المطوّر يوسف البدوي ("أنا"، "المطوّر") لمعلوماتك واستخدامها وحمايتها عند استخدامك التطبيق. باستخدامك للتطبيق، فإنك توافق على هذه السياسة.</p>
+    <p>مرحبًا بك في تطبيق <strong>منهو</strong>. توضّح سياسة الخصوصية هذه كيفية جمع المطوّر يوسف البدوي ("أنا"، "المطوّر") للمعلومات واستخدامها وحمايتها عند استخدامك التطبيق. باستخدامك للتطبيق، فإنك توافق على هذه السياسة.</p>
+  </div>
+
+  <div class="card">
+    <h2>ما الذي يقدّمه منهو</h2>
+    <p>يحميك منهو من مكالمات السبام والاحتيال، ويعرض اسم المتصل فقط إذا كان محفوظًا مسبقًا في جهات اتصالك. لا يوفّر منهو أي وسيلة للبحث عن معلومات عن أشخاص آخرين، ولا يقوم بتجميع أو عرض ملفات تعريفية للأفراد من سجلات عامة أو مساهمات مجتمعية أو أي مصدر آخر.</p>
   </div>
 
   <div class="card">
     <h2>المعلومات التي نجمعها</h2>
     <ul>
-      <li><strong>رقم الهاتف:</strong> يُستخدم لإنشاء حسابك وتقديم خدمة التعرف على المتصل.</li>
-      <li><strong>جهات الاتصال (بإذنك):</strong> يتم رفعها بصيغة مشفّرة لتحسين دقة قاعدة البيانات. يمكنك إلغاء الموافقة في أي وقت.</li>
-      <li><strong>سجلات المكالمات (بإذنك):</strong> تُستخدم محليًا فقط على جهازك للتعرف على المتصلين، ولا تُخزَّن على خوادمنا.</li>
-      <li><strong>استعلامات البحث:</strong> الأرقام أو الأسماء التي تبحث عنها لعرض النتائج وتحسين القاعدة.</li>
-      <li><strong>معلومات الجهاز:</strong> نوع الجهاز ونسخة نظام التشغيل لأغراض التوافق وتقارير الأعطال.</li>
+      <li><strong>معلومات الحساب:</strong> رقم هاتفك، أو اسمك وبريدك الإلكتروني إذا اخترت تسجيل الدخول عبر Google أو Apple، وذلك لإنشاء حسابك وتأمينه.</li>
+      <li><strong>جهات الاتصال (بإذنك) — على جهازك فقط:</strong> تُستخدم حصريًا على جهازك لعرض اسم متصل محفوظ مسبقًا لديك. لا يتم رفع دفتر جهات اتصالك أو نقله أو تخزينه على خوادمنا أبدًا.</li>
+      <li><strong>سجل المكالمات — على جهازك فقط:</strong> يُخزَّن محليًا على جهازك لعرض سجل مكالماتك داخل التطبيق، ولا يُرفع إلى خوادمنا.</li>
+      <li><strong>بلاغات السبام (أرقام فقط):</strong> عند الإبلاغ عن رقم كسبام، نخزّن رقم الهاتف (أو صيغة مشفّرة منه) وعدد البلاغات على خوادمنا لحماية المجتمع، دون ربط أي اسم بالبلاغ.</li>
+      <li><strong>بيانات الاستخدام والتشخيص:</strong> تحليلات أساسية (مثل فتح التطبيق أو استخدام ميزة) وبيانات الأعطال والأداء، تُستخدم بشكل مجمّع لتحسين التطبيق ولا ترتبط بهوية أي متصل.</li>
+      <li><strong>معلومات الجهاز:</strong> نوع الجهاز ونسخة النظام ورمز الإشعارات، لأغراض التوافق وتسليم الإشعارات.</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>كيف نستخدم معلوماتك</h2>
     <ul>
-      <li>التعرف على المتصلين المجهولين وعرض أسمائهم.</li>
-      <li>اكتشاف المكالمات المزعجة وحجبها.</li>
-      <li>السماح للمستخدمين بالبحث عن أرقام وأسماء.</li>
-      <li>تحسين دقة القاعدة من خلال مساهمات المجتمع.</li>
-      <li>إرسال إشعارات ضرورية متعلقة بالتطبيق (لا إعلانات بدون موافقة).</li>
+      <li>عرض اسم عند مكالمة واردة أو صادرة — فقط إذا كان الرقم محفوظًا مسبقًا في جهات اتصالك.</li>
+      <li>تمييز الأرقام التي أبلغ عنها المجتمع كسبام أو احتيال لتجنّبها أو حجبها.</li>
+      <li>السماح لك بحجب الأرقام التي لا ترغب بها.</li>
+      <li>إنشاء حسابك وتأمينه وإدارته.</li>
+      <li>تحسين التطبيق باستخدام بيانات استخدام مجمّعة وغير معرِّفة للهوية.</li>
+      <li>إرسال إشعارات ضرورية متعلقة بالخدمة (لا إعلانات بدون موافقتك).</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>مشاركة البيانات</h2>
-    <p>نحن <strong>لا نبيع</strong> بياناتك الشخصية لأطراف ثالثة. قد تُشارَك البيانات في الحالات المحدودة التالية فقط:</p>
+    <p>نحن <strong>لا نبيع</strong> بياناتك الشخصية، ولا نشاركها مع سماسرة بيانات. قد تُشارَك البيانات في الحالات المحدودة التالية فقط:</p>
     <ul>
-      <li>مع مزودي الخدمة (مثل الاستضافة السحابية) لتشغيل التطبيق حصرًا.</li>
+      <li>مع مزودي خدمة يشغّلون التطبيق نيابة عنا — حاليًا Google/Firebase (تسجيل الدخول، الإشعارات، التحليلات، تقارير الأعطال) وSupabase (سجلات الحساب وقاعدة بلاغات السبام) — حصرًا لتقديم الخدمة.</li>
       <li>إذا اقتضى النظام السعودي أو إجراء قانوني ذلك.</li>
-      <li>بصيغة مجهولة الهوية ومجمّعة لأغراض البحث أو التحليل.</li>
+      <li>بصيغة مجهولة الهوية ومجمّعة (مثل إجمالي بلاغات السبام) لا يمكن أن تُعرّف عليك.</li>
     </ul>
   </div>
 
   <div class="card">
     <h2>حقوقك</h2>
     <ul>
-      <li>طلب نسخة من بياناتك.</li>
-      <li>طلب حذف حسابك وبياناتك المرتبطة.</li>
-      <li>إلغاء رفع جهات الاتصال في إعدادات التطبيق.</li>
-      <li>تسجيل رقمك كخاص أو غير مرئي.</li>
+      <li>طلب نسخة من البيانات المرتبطة بحسابك.</li>
+      <li>حذف حسابك في أي وقت من <strong>الملف الشخصي ← حذف الحساب</strong> داخل التطبيق، أو عبر مراسلتنا.</li>
+      <li>إلغاء إذن جهات الاتصال أو الإشعارات أو الكاميرا أو الميكروفون في أي وقت من إعدادات الآيفون.</li>
+      <li>الاعتراض على بلاغ سبام تعتقد أنه خاطئ عبر التواصل معنا.</li>
     </ul>
     <p style="margin-top:12px;">للتواصل: <a href="mailto:manho.sa.official@gmail.com">manho.sa.official@gmail.com</a></p>
   </div>
 
   <div class="card">
     <h2>الاحتفاظ بالبيانات</h2>
-    <p>تُحتفظ ببياناتك طالما حسابك نشط. عند حذف الحساب، تُحذف البيانات الشخصية نهائيًا خلال 30 يومًا.</p>
+    <p>تُحتفظ ببيانات حسابك طالما هو نشط. عند حذف الحساب، تُحذف بيانات حسابك نهائيًا خلال 30 يومًا. قد تُحتفظ ببيانات بلاغات السبام (أرقام فقط، دون أسماء) لفترة أطول لحماية بقية المستخدمين، وفقًا للأنظمة المعمول بها.</p>
   </div>
 
   <div class="card">
     <h2>خصوصية الأطفال</h2>
-    <p>تطبيق منهو غير موجّه للأطفال دون سن 13. لا نجمع بيانات الأطفال عمدًا. إذا اعتقدت أن طفلًا قدّم بياناته، يرجى التواصل معنا فورًا.</p>
+    <p>تطبيق منهو غير موجّه للأطفال دون سن 13. لا نجمع بيانات الأطفال عمدًا. إذا اعتقدت أن طفلًا قدّم بياناته، يرجى التواصل معنا فورًا وسنقوم بحذفها.</p>
   </div>
 
   <div class="card">
     <h2>الأمان</h2>
-    <p>نستخدم تشفيرًا وممارسات أمنية معيارية لحماية بياناتك. تُرفع جهات الاتصال بصيغة مشفّرة (Hash) ولا يمكن قراءتها كنص عادي.</p>
+    <p>نستخدم تشفيرًا معياريًا أثناء النقل وضوابط وصول على خوادمنا لحماية بياناتك. دفتر جهات اتصالك وسجل مكالماتك لا يغادران جهازك أبدًا، لذا فهما غير معرَّضين لأي اختراق على مستوى الخادم.</p>
+  </div>
+
+  <div class="card">
+    <h2>خدمات الطرف الثالث</h2>
+    <p>يستخدم منهو الخدمات التالية لتشغيل التطبيق:</p>
+    <ul>
+      <li><strong>Firebase / Google</strong> (تسجيل الدخول، الإشعارات، التحليلات، تقارير الأعطال)</li>
+      <li><strong>Supabase</strong> (سجلات الحساب وقاعدة بلاغات السبام)</li>
+      <li><strong>تسجيل الدخول عبر Apple</strong>، عند اختيارك لهذه الطريقة</li>
+    </ul>
   </div>
 
   <div class="card">
@@ -200,7 +244,7 @@
 </div>
 
 <footer>
-  © 2025 Youssef Elbedwehy — منهو · Manho. All rights reserved.
+  © 2026 Youssef Elbedwehy — منهو · Manho. All rights reserved.
 </footer>
 
 <script>
