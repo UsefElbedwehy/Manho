@@ -10,6 +10,9 @@
     header { background: #1c1c1e; color: white; padding: 40px 20px; text-align: center; }
     header h1 { font-size: 2rem; font-weight: 700; }
     header p { color: #a1a1a6; margin-top: 8px; }
+    nav.pages { display: flex; justify-content: center; gap: 20px; padding: 14px 20px; background: #f0f0f2; font-size: 0.9rem; }
+    nav.pages a { color: #0071e3; text-decoration: none; font-weight: 600; }
+    nav.pages a.current { color: #1d1d1f; text-decoration: underline; }
     .lang-toggle { display: flex; justify-content: center; gap: 12px; padding: 20px; }
     .lang-toggle button { padding: 8px 24px; border: 1.5px solid #0071e3; border-radius: 20px; background: transparent; color: #0071e3; cursor: pointer; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
     .lang-toggle button.active { background: #0071e3; color: white; }
@@ -24,6 +27,8 @@
     .faq-item strong { display: block; margin-bottom: 6px; color: #1d1d1f; font-size: 1rem; }
     .contact-box { background: #f0f7ff; border-radius: 12px; padding: 20px; margin-top: 16px; }
     .contact-box a { color: #0071e3; font-weight: 600; text-decoration: none; }
+    .steps { background: #f0f7ff; border-radius: 12px; padding: 16px 20px; margin-top: 10px; }
+    .steps li { margin-bottom: 4px; }
     .rtl { direction: rtl; text-align: right; }
     .rtl ul { padding-left: 0; padding-right: 20px; }
     [data-lang="ar"] { display: none; }
@@ -36,6 +41,12 @@
   <p>Support Center — مركز الدعم</p>
 </header>
 
+<nav class="pages">
+  <a href="manho-privacy-policy.html">Privacy Policy</a>
+  <a href="manho-terms.html">Terms of Service</a>
+  <a href="manho-support.html" class="current">Support</a>
+</nav>
+
 <div class="lang-toggle">
   <button class="active" onclick="setLang('en')">English</button>
   <button onclick="setLang('ar')">العربية</button>
@@ -46,7 +57,18 @@
 
   <div class="card">
     <h2>About Manho (منهو)</h2>
-    <p>Manho is a caller ID and spam blocking app designed for Arabic-speaking users. It helps you identify unknown callers, block spam calls, and search for phone numbers or contact names in our community-powered database.</p>
+    <p>Manho is a spam and scam call protection app for Arabic-speaking users. It labels incoming calls using two things only: numbers the community has reported as spam, and numbers already saved in your own phone contacts. Manho is not a people-search or public-records app — it does not let you look up information about someone else.</p>
+  </div>
+
+  <div class="card">
+    <h2>Account &amp; Data Deletion</h2>
+    <p>You can permanently delete your Manho account and account data directly in the app:</p>
+    <ol class="steps">
+      <li>Open Manho</li>
+      <li>Go to <strong>Profile</strong></li>
+      <li>Tap <strong>Delete Account</strong> and confirm</li>
+    </ol>
+    <p style="margin-top:12px;">You can also request deletion by emailing <a href="mailto:manho.sa.official@gmail.com">manho.sa.official@gmail.com</a>. See our <a href="manho-privacy-policy.html">Privacy Policy</a> for what is deleted and when.</p>
   </div>
 
   <div class="card">
@@ -54,27 +76,31 @@
 
     <div class="faq-item">
       <strong>How does Manho identify callers?</strong>
-      <p>Manho uses a community-sourced database. When users (with permission) contribute contacts, they are hashed and stored to help identify numbers for everyone.</p>
+      <p>Two ways only: (1) a number already saved in your own contacts is labeled instantly on your device — this never leaves your device; (2) a number the community has reported is labeled "Spam" so you can avoid or block it.</p>
     </div>
     <div class="faq-item">
-      <strong>How do I remove my number from the database?</strong>
-      <p>Go to Settings → Privacy → Mark my number as private. You can also email us and we will remove it within 7 business days.</p>
+      <strong>Can I look up information about someone else's number?</strong>
+      <p>No. Manho does not offer a way to search for or view a profile of another person. The only thing it can tell you about an unknown number is whether the community has reported it as spam.</p>
     </div>
     <div class="faq-item">
       <strong>Does Manho access my contacts without permission?</strong>
-      <p>No. Manho will always ask for your explicit permission before accessing contacts or call logs. You can revoke permission at any time in your iPhone settings.</p>
+      <p>No. Manho always asks for your explicit permission before accessing contacts or call logs, and both stay on your device — they are never uploaded. You can revoke permission at any time in your iPhone's Settings app.</p>
+    </div>
+    <div class="faq-item">
+      <strong>I think a spam report on my number is wrong. What can I do?</strong>
+      <p>Email us at manho.sa.official@gmail.com with the number and we'll review it.</p>
     </div>
     <div class="faq-item">
       <strong>Is my data sold to advertisers?</strong>
-      <p>Never. We do not sell personal data. See our Privacy Policy for full details.</p>
+      <p>Never. We do not sell personal data. See our <a href="manho-privacy-policy.html">Privacy Policy</a> for full details.</p>
     </div>
     <div class="faq-item">
       <strong>How do I delete my account?</strong>
-      <p>Go to Settings → Account → Delete Account, or email us at manho.sa.official@gmail.com with your request.</p>
+      <p>Go to <strong>Profile → Delete Account</strong> in the app, or email us at manho.sa.official@gmail.com with your request.</p>
     </div>
     <div class="faq-item">
       <strong>The app is not identifying callers. What should I do?</strong>
-      <p>Make sure you have granted "Phone" and "Contacts" permissions in iPhone Settings → Privacy. Also ensure you've enabled the Manho extension under Settings → Phone → Call Blocking & Identification.</p>
+      <p>Make sure you've granted the Contacts permission in iPhone Settings → Manho, and that the Manho extension is enabled under Settings → Phone → Call Blocking &amp; Identification.</p>
     </div>
   </div>
 
@@ -93,7 +119,18 @@
 
   <div class="card">
     <h2>عن تطبيق منهو</h2>
-    <p>منهو هو تطبيق للتعرف على المتصل وحجب المكالمات المزعجة، مصمّم للمستخدمين الناطقين بالعربية. يساعدك على معرفة هوية المتصلين المجهولين، وحجب السبام، والبحث عن أرقام أو أسماء في قاعدة بياناتنا المجتمعية.</p>
+    <p>منهو هو تطبيق لحماية المستخدمين الناطقين بالعربية من مكالمات السبام والاحتيال. يعرض التطبيق تسمية للمكالمات الواردة بناءً على أمرين فقط: الأرقام التي أبلغ عنها المجتمع كسبام، والأرقام المحفوظة مسبقًا في جهات اتصال هاتفك. منهو ليس تطبيقًا للبحث عن الأشخاص أو السجلات العامة، ولا يتيح لك البحث عن معلومات عن شخص آخر.</p>
+  </div>
+
+  <div class="card">
+    <h2>حذف الحساب والبيانات</h2>
+    <p>يمكنك حذف حسابك وبياناته نهائيًا مباشرة من داخل التطبيق:</p>
+    <ol class="steps">
+      <li>افتح تطبيق منهو</li>
+      <li>اذهب إلى <strong>الملف الشخصي</strong></li>
+      <li>اضغط على <strong>حذف الحساب</strong> وأكّد</li>
+    </ol>
+    <p style="margin-top:12px;">يمكنك أيضًا طلب الحذف عبر مراسلتنا على <a href="mailto:manho.sa.official@gmail.com">manho.sa.official@gmail.com</a>. راجع <a href="manho-privacy-policy.html">سياسة الخصوصية</a> لمعرفة ما يُحذف ومتى.</p>
   </div>
 
   <div class="card">
@@ -101,27 +138,31 @@
 
     <div class="faq-item">
       <strong>كيف يتعرف منهو على المتصلين؟</strong>
-      <p>يستخدم منهو قاعدة بيانات مجتمعية. عندما يشارك المستخدمون (بإذنهم) جهات اتصالهم، تُشفَّر وتُخزَّن للمساعدة في التعرف على الأرقام للجميع.</p>
+      <p>بطريقتين فقط: (1) رقم محفوظ مسبقًا في جهات اتصالك يُعرض فورًا على جهازك، ولا يغادر هذا الجهاز أبدًا؛ (2) رقم أبلغ عنه المجتمع فيُعرض بتسمية "سبام" لتتجنبه أو تحجبه.</p>
     </div>
     <div class="faq-item">
-      <strong>كيف أحذف رقمي من القاعدة؟</strong>
-      <p>اذهب إلى الإعدادات ← الخصوصية ← "تسجيل رقمي كخاص". يمكنك أيضًا مراسلتنا وسنحذفه خلال 7 أيام عمل.</p>
+      <strong>هل يمكنني البحث عن معلومات عن رقم شخص آخر؟</strong>
+      <p>لا. لا يوفّر منهو أي وسيلة للبحث عن أو عرض ملف تعريفي لشخص آخر. الشيء الوحيد الذي يمكن أن يخبرك به عن رقم مجهول هو ما إذا أبلغ عنه المجتمع كسبام.</p>
     </div>
     <div class="faq-item">
       <strong>هل يصل منهو إلى جهات اتصالي دون إذن؟</strong>
-      <p>لا. سيطلب منهو دائمًا إذنك الصريح قبل الوصول إلى جهات الاتصال أو سجلات المكالمات. يمكنك إلغاء الإذن في أي وقت من إعدادات الآيفون.</p>
+      <p>لا. سيطلب منهو دائمًا إذنك الصريح قبل الوصول إلى جهات الاتصال أو سجلات المكالمات، وكلاهما يبقى على جهازك ولا يُرفع أبدًا. يمكنك إلغاء الإذن في أي وقت من إعدادات الآيفون.</p>
+    </div>
+    <div class="faq-item">
+      <strong>أعتقد أن بلاغ سبام على رقمي خاطئ. ماذا أفعل؟</strong>
+      <p>راسلنا على manho.sa.official@gmail.com مع ذكر الرقم وسنراجعه.</p>
     </div>
     <div class="faq-item">
       <strong>هل تُباع بياناتي للمعلنين؟</strong>
-      <p>أبدًا. لا نبيع البيانات الشخصية. راجع سياسة الخصوصية للتفاصيل الكاملة.</p>
+      <p>أبدًا. لا نبيع البيانات الشخصية. راجع <a href="manho-privacy-policy.html">سياسة الخصوصية</a> للتفاصيل الكاملة.</p>
     </div>
     <div class="faq-item">
       <strong>كيف أحذف حسابي؟</strong>
-      <p>اذهب إلى الإعدادات ← الحساب ← حذف الحساب، أو راسلنا على manho.sa.official@gmail.com.</p>
+      <p>اذهب إلى <strong>الملف الشخصي ← حذف الحساب</strong> داخل التطبيق، أو راسلنا على manho.sa.official@gmail.com.</p>
     </div>
     <div class="faq-item">
       <strong>التطبيق لا يتعرف على المتصلين، ماذا أفعل؟</strong>
-      <p>تأكد من منح إذن "الهاتف" و"جهات الاتصال" من إعدادات آيفون ← الخصوصية. وتأكد أيضًا من تفعيل إضافة منهو في الإعدادات ← الهاتف ← حجب المكالمات والتعرف عليها.</p>
+      <p>تأكد من منح إذن جهات الاتصال من إعدادات آيفون ← منهو، وتأكد من تفعيل إضافة منهو في الإعدادات ← الهاتف ← حجب المكالمات والتعرف عليها.</p>
     </div>
   </div>
 
@@ -136,7 +177,7 @@
 </div>
 
 <footer>
-  © 2025 Youssef Elbedwehy — منهو · Manho. All rights reserved.
+  © 2026 Youssef Elbedwehy — منهو · Manho. All rights reserved.
 </footer>
 
 <script>
